@@ -1,1 +1,16 @@
+# Secrets
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.yaml
+config/secrets.json
+
+# Common junk
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+.DS_Store
