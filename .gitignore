@@ -1,16 +1,17 @@
-# Secrets
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-secrets.yaml
-config/secrets.json
-
-# Common junk
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-.venv/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
 venv/
-node_modules/
-.DS_Store
+ENV/
+env.bak/
+venv.bak/
+
+# Project specifics
+logs/
+data/

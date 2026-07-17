@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from langchain_ollama import ChatOllama
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage
 from core.config import settings
 from graph.state import GraphState
@@ -38,9 +38,8 @@ Available Workflows:
 
 Respond using the requested structured output. Be highly accurate."""
 
-    llm = ChatOllama(
+    llm = ChatGoogleGenerativeAI(
         model=settings.ROUTER_MODEL,
-        base_url=settings.OLLAMA_URL,
         temperature=0.0
     )
     

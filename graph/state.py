@@ -7,11 +7,10 @@ class GraphState(TypedDict):
     
     Attributes:
         messages: The list of messages in the conversation. Use `add_messages` to append.
-        selected_workflow: The workflow selected by the router (e.g., 'HR', 'Finance', 'IT', 'General').
-        router_confidence: The confidence score from the router.
-        router_reason: The reason provided by the router for selecting the workflow.
+        next_worker: The next worker agent to route to, or 'FINISH' if the task is complete.
+        supervisor_reason: The reason provided by the supervisor for the routing decision.
     """
     messages: Annotated[list[AnyMessage], add_messages]
-    selected_workflow: Optional[str]
-    router_confidence: Optional[float]
-    router_reason: Optional[str]
+    next_worker: Optional[str]
+    sub_node: Optional[str]
+    supervisor_reason: Optional[str]
